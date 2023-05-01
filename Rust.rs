@@ -1,57 +1,62 @@
-use std::io;
-
+use std::io::{BufRead, BufReader};
+use std::time::Instant;
+use std::env;
+use std::fs::File;
 const MAXN: usize = 20; // Max value of matrix order
-// 
-
 fn main() {
-    let n: usize;
-    let mut a: [[f32; MAXN+1]; MAXN] = [[0.0; MAXN+1]; MAXN];
-    let mut x: [f32; MAXN] = [0.0; MAXN];
-
-    let mut input = String::new();
-    println!("Enter the order of matrix: ");
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read line");
-    n = input.trim().parse().unwrap();
-
-    println!("\nEnter the elements of augmented matrix row-wise:\n");
+    let t_start = Instant::now();
+    let args: Vec<String> = env::args().collect();
+    let n: usize = args[2].parse().unwrap();
+    let mut ab: [[f64; MAXN+1]; MAXN] = [[0.0; MAXN+1]; MAXN];
+    let mut x: [f64; MAXN] = [0.0; MAXN];
+    if args.len() != 3 {
+        println!("Incorrect number of arguments");
+        std::process::exit(1);
+    }
+    read_matrix(n, &args[1], &mut ab);
     for i in 0..n {
-        for j in 0..=n {
-            println!("A[{}][{}] : ", i, j);
-            let mut input = String::new();
-            io::stdin()
-                .read_line(&mut input)
-                .expect("Failed to read line");
-            a[i][j] = input.trim().parse().unwrap();
+        for j in 0..(n + 1) {
+            println!("Ab[{}][{}]: {:.2}", i + 1, j + 1, ab[i][j]);
         }
     }
-
-    gauss(n, &mut a, &mut x);
-
+    gauss(n, &mut ab, &mut x);
     println!("\nThe solution is:");
     for i in 0..n {
-        println!("x{} = {}", i+1, x[i]); // x1, x2, x3 are the required solutions
+        println!("x{} = {:.2}", i+1, x[i]);
     }
+    let t_end = Instant::now();
+    let execution_time = t_end.duration_since(t_start);
+    println!("Tempo de execucao: {:#?}", execution_time);
 }
-
-fn gauss(n: usize, a: &mut[[f32; MAXN+1]; MAXN], x: &mut[f32]) {
-    for j in 0..n {
+fn gauss(n: usize, ab: &mut[[f64; MAXN+1]; MAXN], x: &mut [f64; MAXN]) {
+    for j in 0..n { /* loop for the generation of upper triangular matrix*/
         for i in 0..n {
             if i > j {
-                let c = a[i][j] / a[j][j];
-                for k in 0..=n {
-                    a[i][k] -= c * a[j][k];
+                let c = ab[i][j] / ab[j][j];
+                for k in 0..(n + 1) {
+                    ab[i][k] = ab[i][k] - c * ab[j][k];
                 }
             }
         }
     }
-    x[n-1] = a[n-1][n] / a[n-1][n-1];
-    for i in (0..n-1).rev() {
+    x[n-1] = ab[n-1][n] / ab[n-1][n-1];
+    for i in (0..n-1).rev() { // this loop is for backward substitution
         let mut sum = 0.0;
         for j in i+1..n {
-            sum += a[i][j] * x[j];
+            sum += ab[i][j] * x[j];
         }
-        x[i] = (a[i][n] - sum) / a[i][i];
+        x[i] = (ab[i][n] - sum) / ab[i][i];
+    }
+}
+fn read_matrix(n: usize, arg: &str, ab: &mut[[f64; MAXN+1]; MAXN]){
+    let filename = arg;
+    let file = File::open(filename).unwrap();
+    let reader = BufReader::new(file);
+    for (i, line) in reader.lines().enumerate() {
+        let line = line.unwrap();
+        let mut nums = line.split_whitespace().map(|num| num.parse().unwrap());
+        for j in 0..n+1 {
+            ab[i][j] = nums.next().unwrap();
+        }
     }
 }
