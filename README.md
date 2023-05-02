@@ -1,5 +1,5 @@
 # Eliminação De Gauss
-Implementação da Eliminação de Gauss em <b>C<b>, <b>Rust<b> e <b>Golang<b> para o segundo trabalho da disciplina de Conceitos de Linguagens de Programação na UFPel.
+Implementação da Eliminação de Gauss em <b>C</b>, <b>Rust<\b> e <b>Golang<\b> para o segundo trabalho da disciplina de Conceitos de Linguagens de Programação na UFPel.
 
 ## 🛠️ Abrir e rodar o projeto 
 
