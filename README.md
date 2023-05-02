@@ -5,8 +5,10 @@ Implementação da Eliminação de Gauss em <b>C</b>, <b>Rust</b> e <b>Golang</b
 ## 🛠️ Compilando e executando:
 Os programas recebem por linha de comando a matriz de entrada em um arquivo texto seguido pelo tamanho N de uma matriz NxN+1. A matriz deve:
 * Estar no formato: 
+
 ![6](https://user-images.githubusercontent.com/76601652/235670231-b0e4994c-876b-4610-a684-a55931489198.PNG)
 * Ter o tamanho NxN+1, equivalente a matriz Ab desse exemplo:
+
 ![Capturar](https://user-images.githubusercontent.com/76601652/235670730-cc2ee712-386e-4d25-895d-354c366a8801.PNG)
 
 ### C:
