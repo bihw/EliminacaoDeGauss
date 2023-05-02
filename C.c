@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#define MAXN 200  // Max value of matrix A order 
+#define MAXN 1000 // Max value of matrix A order 
 int N; 
 float Ab[MAXN][MAXN+1], X[MAXN];
 void gauss();
@@ -25,13 +25,13 @@ int main(int argc, char** argv) {
         printf("\n");
     } */
     gauss();
+    t_end = clock();
+    execution_time = (((double)(t_end - t_start)) / CLOCKS_PER_SEC)*1000.0;
     printf("\nThe solution is: ");
     for(i=1; i<=N; i++) {
         printf("\nx%d = %.2f\t",i,X[i]); /* x1, x2, x3 are the required solutions*/
     }
-    t_end = clock();
-    execution_time = (((double)(t_end - t_start)) / CLOCKS_PER_SEC)*1000.0;
-    printf("\nTempo de execucao: %.4fms\n", execution_time);
+    printf("\nTempo de execucao: %fms\n", execution_time);
     return(0);
 }
 void gauss(){

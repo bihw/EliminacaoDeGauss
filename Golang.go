@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const MAXN int = 200 // Max value of A matrix order
+const MAXN int = 1000 // Max value of A matrix order
 var N int
 var Ab [MAXN][MAXN + 1]float64
 var X [MAXN]float64
@@ -31,12 +31,12 @@ func main() {
 		fmt.Println("")
 	}*/
 	gauss()
+	t_end := time.Now()
+	execution_time := t_end.Sub(t_start)
 	fmt.Printf("\nThe solution is: ")
 	for i = 0; i < N; i++ {
 		fmt.Printf("\nx%d = %.2f\t", i+1, X[i]) // x1, x2, x3 are the required solutions
 	}
-	t_end := time.Now()
-	execution_time := t_end.Sub(t_start)
 	fmt.Printf("\nTempo de execução: %v\n", execution_time)
 }
 func gauss() {

@@ -2,7 +2,7 @@ use std::io::{BufRead, BufReader};
 use std::time::Instant;
 use std::env;
 use std::fs::File;
-const MAXN: usize = 200; // Max value of A matrix order
+const MAXN: usize = 201; // Max value of A matrix order
 fn main() {
     let t_start = Instant::now();
     let args: Vec<String> = env::args().collect();
@@ -22,12 +22,12 @@ fn main() {
         println!("");
     }*/
     gauss(n, &mut ab, &mut x);
+    let t_end = Instant::now();
+    let execution_time = t_end.duration_since(t_start);
     println!("\nThe solution is:");
     for i in 0..n { 
         println!("x{} = {:.2}", i+1, x[i]); /* x1, x2, x3 are the required solutions*/
-    }
-    let t_end = Instant::now();
-    let execution_time = t_end.duration_since(t_start);
+    }    
     println!("Tempo de execucao: {:#?}", execution_time);
 }
 fn gauss(n: usize, ab: &mut[[f64; MAXN+1]; MAXN], x: &mut [f64; MAXN]) {
