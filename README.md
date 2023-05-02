@@ -3,11 +3,11 @@ Implementação da Eliminação de Gauss em __C__, __Rust__ e __Golang__ para o 
 
 
 ## 🛠️ Compilando e executando:
-Os programas recebem por linha de comando a matriz de entrada em um arquivo texto seguido pelo tamanho N de uma matriz NxN+1. A matriz deve:
+Os programas recebem por linha de comando a matriz de entrada em um arquivo texto seguido pelo tamanho N de uma matriz NxN+1 (matriz aumentada). A matriz deve:
 * Estar no formato: 
 
 ![7](https://user-images.githubusercontent.com/76601652/235682119-3fcdb58b-7da4-4058-b486-225d6d9e020a.PNG)
-* Ter o tamanho NxN+1, equivalente a matriz Ab desse exemplo:
+* Ser a matriz aumentada do sistema (tamanho NxN+1), equivalente a matriz Ab desse exemplo:
 
 <img src="https://user-images.githubusercontent.com/76601652/235670730-cc2ee712-386e-4d25-895d-354c366a8801.PNG" width="601" height="325">
 
