@@ -13,8 +13,8 @@ Os programas recebem por linha de comando a matriz de entrada em um arquivo text
 
 ### Exemplo em C:
 ```
-gcc C.c -o c.exe
-.\c.exe matrix_6.txt 6
+gcc C.c -o c
+.\c matrices/matrix_6.txt 6
 ```
 Onde o arquivo texto "matrix_6.txt" contém uma matriz de entrada com tamanho 6x7
 
@@ -22,14 +22,14 @@ Onde o arquivo texto "matrix_6.txt" contém uma matriz de entrada com tamanho 6x
 ### Exemplo em Rust:
 ```
 rustc Rust.rs
-.\Rust.exe matrix_7.txt 7
+.\Rust matrices/matrix_7.txt 7
 ```
 Onde o arquivo texto "matrix_7.txt" contém uma matriz de entrada com tamanho 7x8
 
 
 ### Exemplo em Golang:
 ```
-go run Golang.go matrix_8.txt 8
+go run Golang.go matrices/matrix_8.txt 8
 ```
 Onde o arquivo texto "matrix_8.txt" contém uma matriz de entrada com tamanho 8x9
 
