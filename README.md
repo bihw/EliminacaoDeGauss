@@ -11,17 +11,25 @@ Os programas recebem por linha de comando a matriz de entrada em um arquivo text
 
 ![Capturar](https://user-images.githubusercontent.com/76601652/235670730-cc2ee712-386e-4d25-895d-354c366a8801.PNG)
 
-### C:
+### Exemplo em C:
 ```
 gcc C.c -o c.exe
 .\c.exe matrix_6.txt 6
 ```
 Onde o arquivo texto "matrix_6.txt" contém uma matriz de entrada com tamanho 6x7
 
-### Rust:
+### Exemplo em Rust:
+```
+rustc Rust.rs
+.\Rust.exe matrix_7.txt 7
+```
+Onde o arquivo texto "matrix_7.txt" contém uma matriz de entrada com tamanho 7x8
 
-### Golang:
-
+### Exemplo em Golang:
+```
+go run Golang.go matrix_8.txt 8
+```
+Onde o arquivo texto "matrix_8.txt" contém uma matriz de entrada com tamanho 8x9
 
 ## ✒️ Autores: 
 * Bianca Waskow https://github.com/bihw <br>
