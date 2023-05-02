@@ -9,29 +9,31 @@ import (
 	"time"
 )
 
-const MAXN int = 20 // Max value of matrix order
+const MAXN int = 200 // Max value of A matrix order
 var N int
 var Ab [MAXN][MAXN + 1]float64
 var X [MAXN]float64
 
 func main() {
 	t_start := time.Now()
-	var i, j int
+	var i int //, j int
 	if len(os.Args) != 3 {
 		fmt.Println("Incorrect number of arguments")
 		os.Exit(1)
 	}
 	N, _ = strconv.Atoi(os.Args[2])
 	readMatrix(N, os.Args[1])
+	/*fmt.Printf("Your Ab matrix is: \n")
 	for i = 0; i < N; i++ {
 		for j = 0; j <= N; j++ {
-			fmt.Printf("Ab[%d][%d]: %.2f\n", i+1, j+1, Ab[i][j])
+			fmt.Printf("%.2f  ", Ab[i][j])
 		}
-	}
+		fmt.Println("")
+	}*/
 	gauss()
 	fmt.Printf("\nThe solution is: ")
 	for i = 0; i < N; i++ {
-		fmt.Printf("\nx%d=%f\t", i+1, X[i]) // x1, x2, x3 are the required solutions
+		fmt.Printf("\nx%d = %.2f\t", i+1, X[i]) // x1, x2, x3 are the required solutions
 	}
 	t_end := time.Now()
 	execution_time := t_end.Sub(t_start)
@@ -58,8 +60,8 @@ func gauss() {
 		X[i] = (Ab[i][N] - sum) / Ab[i][i]
 	}
 }
-func readMatrix(N int, filename string) {
-	file, err := os.Open(filename)
+func readMatrix(N int, arg string) {
+	file, err := os.Open(arg)
 	if err != nil {
 		panic(err)
 	}
@@ -78,7 +80,7 @@ func readMatrix(N int, filename string) {
 			fmt.Println("Invalid line in file:", line)
 			os.Exit(1)
 		}
-		for j := 0; j <= N; j++ {
+		for j := 0; j <= N; j++ { // read matrix elements
 			value, err := strconv.ParseFloat(tokens[j], 64)
 			if err != nil {
 				fmt.Println("Invalid value in file:", tokens[j])
