@@ -33,7 +33,7 @@ go run Golang.go matrices/matrix_90.txt 90
 ```
 Onde o arquivo texto "matrix_90.txt" contém uma matriz de entrada com tamanho 90x91
 
-### Saída
+### ✔️ Saída
 A solução do sistema é escrita na tela, junto com o tempo de execução
 
 ![ree](https://user-images.githubusercontent.com/76601652/235684084-eca04f76-b4df-4175-8fb5-b1fdc9593c08.PNG) 
