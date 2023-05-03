@@ -57,10 +57,13 @@ Nós não fizemos isso para deixar da maneira mais parecida com a nossa versão 
 #### Observação: função gauss
 Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório).
 * C:
+
 ![Gauss_C](https://user-images.githubusercontent.com/76601652/235968502-0e6bf9a2-8c35-492c-b643-7f49a76e5f37.PNG)
 * Rust:
+
 ![Gauss_Rust](https://user-images.githubusercontent.com/76601652/235968501-a73896bc-d432-4ae3-ae35-ba3ba4e0ebec.PNG)
 * Go:
+
 ![Gauss_Go](https://user-images.githubusercontent.com/76601652/235968500-94fb527a-7357-4e05-8e18-a0e1806a178b.PNG)
 
 ## ✒️ Autores: 
