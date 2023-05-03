@@ -55,7 +55,7 @@ Nós não fizemos isso para deixar da maneira mais parecida com a nossa versão 
 <sub>Esquemos de explicar essa parte no relatório.</sub>
 
 #### Observação: função gauss 
-Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório). <sub>Esquemos de explicar essa parte no relatório².</sub>
+Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório). 
 
 ## ✒️ Autores: 
 * Bianca Waskow https://github.com/bihw <br>
