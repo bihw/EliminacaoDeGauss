@@ -58,8 +58,8 @@ Nós não fizemos isso para deixar da maneira mais parecida com a nossa versão 
 Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório).
 
 <img src="https://user-images.githubusercontent.com/76601652/235966043-0a674dfc-c53d-4faa-84f6-35d02afd4b0c.PNG" width="601" height="346">
-<img src="https://user-images.githubusercontent.com/76601652/235966042-8d436154-bf9f-4dd8-b466-afce72d2c670.PNG" width="601" height="300">
-<img src="https://user-images.githubusercontent.com/76601652/235966032-a59437ee-bbe8-4fd3-9c2c-bca82617ac48.PNG" width="601" height="319">
+<img src="https://user-images.githubusercontent.com/76601652/235967978-432f58c5-2b7a-4b3e-b761-6a63837a0b26.PNG" width="601" height="300">
+<img src="https://user-images.githubusercontent.com/76601652/235967979-45c712f3-0f84-49ab-978d-3b2d0f4e6acb.PNG" width="601" height="319">
 
 ## ✒️ Autores: 
 * Bianca Waskow https://github.com/bihw <br>
