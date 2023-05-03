@@ -54,6 +54,13 @@ Isso criará uma matriz de 405 linhas e 406 colunas, onde cada elemento é inici
 Nós não fizemos isso para deixar da maneira mais parecida com a nossa versão do programa em C.
 <sub>Esquemos de explicar essa parte no relatório.</sub>
 
+#### Observação: função gauss
+Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório).
+
+<img src="https://user-images.githubusercontent.com/76601652/235966043-0a674dfc-c53d-4faa-84f6-35d02afd4b0c.PNG" width="601" height="346">
+<img src="https://user-images.githubusercontent.com/76601652/235966042-8d436154-bf9f-4dd8-b466-afce72d2c670.PNG" width="601" height="300">
+<img src="https://user-images.githubusercontent.com/76601652/235966032-a59437ee-bbe8-4fd3-9c2c-bca82617ac48.PNG" width="601" height="319">
+
 ## ✒️ Autores: 
 * Bianca Waskow https://github.com/bihw <br>
 * Rafael Siqueira https://github.com/Volrizz
