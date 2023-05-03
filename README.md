@@ -54,7 +54,7 @@ Isso criará uma matriz de 405 linhas e 406 colunas, onde cada elemento é inici
 Nós não fizemos isso para deixar da maneira mais parecida com a nossa versão do programa em C.
 <sub>Esquemos de explicar essa parte no relatório.</sub>
 
-#### Observação: função gauss
+#### Observação: função gauss <sub>Esquemos de explicar essa parte no relatório.</sub>
 Quanto a função gauss não notamos muito diferença na implementação de uma linguagem para outra, a não ser em Rust que não nos deixou usar MAXN como uma constante global, nos obrigando a usar passagem por referência (como discutido no relatório).
 * C:
 
